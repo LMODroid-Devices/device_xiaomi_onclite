@@ -21,8 +21,10 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lmodroid
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay/frameworks/opt/net/wifi
+
+PRODUCT_PACKAGES += \
+    OncWifiOverlay \
+    WifiOverlay
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
